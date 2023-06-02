@@ -6,7 +6,8 @@ test.beforeEach(async ({ page }) => {
 
 test.describe('msg Validation', () => {
   test('verify message on site', async ({ page }) => {
-    await page.getByText("Memorial Sale Week is Live !")
+    await page.goto('http://localhost:3000/');
+    await page.getByText("Memorial Sale Week is next week !")
     await expect(page).toBeTruthy();
   })
 
