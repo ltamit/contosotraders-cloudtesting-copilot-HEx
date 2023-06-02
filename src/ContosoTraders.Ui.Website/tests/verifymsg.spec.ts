@@ -10,7 +10,8 @@ test.describe('msg Validation', () => {
     await page.getByText("Memorial Sale Week is next week !")
     await expect(page).toBeTruthy();
     //await page.click('text=Memorial Sale Week is next week !');
-    
+    //await page.click('text=Memorial Sale Week is next week !');
+
   })
 
 });
