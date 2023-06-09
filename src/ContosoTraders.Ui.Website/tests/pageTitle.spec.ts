@@ -8,10 +8,3 @@ test('should have the correct page title', async ({ page }) => {
   const pageTitle = await page.title();
   expect(pageTitle).toBe('Contoso Traders');
 });
-
-test.describe('Product page', () => {
-  test.beforeEach(async ({ page }) => { 
-    await page.goto('http://localhost:3000/product/1');
-  });
-
-//this is the test for the product page

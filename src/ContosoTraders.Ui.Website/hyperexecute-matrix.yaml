@@ -2,6 +2,7 @@
 version: "0.1"
 retryOnFailure: true
 maxRetries: 1
+defaultReports: true
 matrix:
   os: [win,linux]
   browser: [
@@ -19,6 +20,19 @@ matrix:
     ]
 runson: ${matrix.os}
 tunnel: true
+mergeArtifacts: true
+
+uploadArtefacts:
+ - name: screenshots
+   path:
+    - test-results
+
+report: true
+partialReports:
+ location: playwright-report
+ type: html
+ frameworkName: playwright
+
 pre:
   - npm install
   - npx playwright install
@@ -26,4 +40,4 @@ cacheKey: '{{ checksum "package-lock.json" }}'
 cacheDirectories:
   - node_modules
 testSuites:
-  - npx playwright test --project=$browser $methods 
+  - npx playwright test --reporter=html --project=$browser $methods 

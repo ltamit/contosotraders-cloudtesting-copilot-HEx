@@ -12,5 +12,4 @@ test.describe('msg validation', () => {
     const msgError = await page.$eval('#msg-error', (el) => el.textContent);
     expect(msgError).toBe('msg is required');
   });
-}
-  
+});
