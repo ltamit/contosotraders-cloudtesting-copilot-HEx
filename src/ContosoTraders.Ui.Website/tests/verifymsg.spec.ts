@@ -4,14 +4,13 @@ test.beforeEach(async ({ page }) => {
   await page.goto('http://localhost:3000/');
 });
 
-test.describe('msg Validation', () => {
-  test('verify message on site', async ({ page }) => {
-    await page.goto('http://localhost:3000/');
-    await page.getByText("Memorial Sale Week is next week !")
-    await expect(page).toBeTruthy();
-    //await page.click('text=Memorial Sale Week is next week !');
-    //await page.click('text=Memorial Sale Week is next week !');
-
-  })
-
-});
+test.describe('msg validation', () => {
+  test('should validate msg', async ({ page }) => {
+    await page.fill('#msg', 'test');
+    await page.click('text=Send');
+    await page.waitForSelector('#msg-error');
+    const msgError = await page.$eval('#msg-error', (el) => el.textContent);
+    expect(msgError).toBe('msg is required');
+  });
+}
+  
