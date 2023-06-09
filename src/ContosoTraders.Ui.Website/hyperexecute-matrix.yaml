@@ -18,9 +18,10 @@ tunnel: true
 mergeArtifacts: true
 
 report: true
+
 partialReports:
   frameworkName: playwright
-  location: playwright-report
+  location: src\ContosoTraders.Ui.Website\playwright-report
   type: html
   email:
     to: 
