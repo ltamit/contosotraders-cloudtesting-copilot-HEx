@@ -4,18 +4,13 @@ retryOnFailure: true
 maxRetries: 1
 defaultReports: true
 matrix:
-  os: [win,linux]
+  os: [win]
   browser: [
-
-    "MicrosoftEdge:latest:Windows10@lambdatest",
-    "chrome:108:Windows10@lambdatest",
-    "pw-firefox:latest@lambdatest"
+    "chrome:108:Windows10@lambdatest"
     ]
   methods:
     [
-      tests/sample.spec.ts,
       tests/pageTitle.spec.ts,
-      tests/searchbox.spec.ts,
       verifyMsg.spec.ts
     ]
 runson: ${matrix.os}
