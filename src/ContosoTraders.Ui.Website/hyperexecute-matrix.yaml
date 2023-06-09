@@ -11,7 +11,7 @@ matrix:
   methods:
     [
       tests/pageTitle.spec.ts,
-      verifyMsg.spec.ts
+      tests/sample.spec.ts
     ]
 runson: ${matrix.os}
 tunnel: true
