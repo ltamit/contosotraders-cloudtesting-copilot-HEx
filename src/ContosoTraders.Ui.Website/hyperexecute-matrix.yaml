@@ -22,11 +22,6 @@ runson: ${matrix.os}
 tunnel: true
 mergeArtifacts: true
 
-uploadArtefacts:
- - name: screenshots
-   path:
-    - test-results
-
 report: true
 partialReports:
   frameworkName: playwright
