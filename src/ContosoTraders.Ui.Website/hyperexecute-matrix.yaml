@@ -29,9 +29,13 @@ uploadArtefacts:
 
 report: true
 partialReports:
- location: playwright-report
- type: html
- frameworkName: playwright
+  frameworkName: playwright
+  location: playwright-report
+  type: html
+  email:
+    to: 
+      - mudassars@lambdatest.com
+      - Shyamalm@lambdatest.com
 
 pre:
   - npm install
