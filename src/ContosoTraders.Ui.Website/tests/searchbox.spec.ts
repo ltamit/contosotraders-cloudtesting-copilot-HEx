@@ -9,6 +9,7 @@ test.describe('Search Box Validation', () => {
     await page.getByPlaceholder('Search by product name or search by image').fill('laptops');
     await page.getByPlaceholder('Search by product name or search by image').press('Enter');
     await expect(page).toHaveURL('http://localhost:3000/');
+    await page.waitForSelector('text=Search by product name or search by image');
   })
 
 });
