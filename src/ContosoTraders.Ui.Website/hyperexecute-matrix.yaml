@@ -35,4 +35,4 @@ cacheKey: '{{ checksum "package-lock.json" }}'
 cacheDirectories:
   - node_modules
 testSuites:
-  - npx playwright test --reporter=html --project=$browser $methods 
+  - npx playwright test --project=$browser $methods 
