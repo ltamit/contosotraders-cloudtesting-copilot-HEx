@@ -21,7 +21,7 @@ report: true
 
 partialReports:
   frameworkName: playwright
-  location: src\ContosoTraders.Ui.Website\playwright-report
+  location: playwright-report
   type: html
   email:
     to: 
