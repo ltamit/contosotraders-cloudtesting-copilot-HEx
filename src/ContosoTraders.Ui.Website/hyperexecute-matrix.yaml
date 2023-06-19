@@ -4,9 +4,9 @@ retryOnFailure: true
 maxRetries: 1
 defaultReports: true
 matrix:
-  os: [win]
+  os: [win,linux]
   browser: [
-    "chrome:108:Windows10@lambdatest"
+    "chrome:108:Windows10@lambdatest","chrome:109:Windows10@lambdatest"
     ]
   methods:
     [
