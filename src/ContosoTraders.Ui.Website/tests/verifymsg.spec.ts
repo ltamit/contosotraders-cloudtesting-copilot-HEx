@@ -13,9 +13,7 @@ test.describe('verify message', () => {
 
 test.describe('verify message', () => {
   test('verify message on the Page', async ({ page }) => {
-    await page.locator("text=Welcome to Contoso Traders").click()
+    await page.locator("text=Eid sales are live 20% off").click()
     await expect(page).toHaveURL('http://localhost:3000/');
   })   
-});
-
-
+}
