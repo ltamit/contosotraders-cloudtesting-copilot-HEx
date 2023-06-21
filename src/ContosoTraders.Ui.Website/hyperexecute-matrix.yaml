@@ -28,7 +28,6 @@ partialReports:
   email:
     to: 
       - mudassars@lambdatest.com
-      - Shyamalm@lambdatest.com
       - mohitj@lambdatest.com
 
 pre:
