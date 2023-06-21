@@ -16,4 +16,4 @@ test.describe('verify message', () => {
     await page.locator("text=Eid sales are live 20% off").click()
     await expect(page).toHaveURL('http://localhost:3000/');
   })   
-}
+});
