@@ -29,6 +29,7 @@ partialReports:
     to: 
       - mudassars@lambdatest.com
       - mohitj@lambdatest.com
+      - Shyamalm@lambdatest.com
 
 pre:
   - npm install
