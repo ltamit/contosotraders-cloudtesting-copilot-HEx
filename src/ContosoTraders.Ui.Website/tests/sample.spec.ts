@@ -8,6 +8,7 @@ test.describe('Cart Validation', () => {
   test('verify cart icon on the Page', async ({ page }) => {
     await page.locator("(//img[@alt='iconimage'])[2]").click()
     await expect(page).toHaveURL('http://localhost:3000/cart');
+    await page.screenshot({ path: `./screenshots/${testInfo.title}.png` });
   })
 
 });
